@@ -1,5 +1,5 @@
-[ansible-control-node]
+[ansible_control_node]
 192.168.68.102
 
-[managed-node]
+[managed_node]
 192.168.68.100

@@ -27,14 +27,36 @@ flowchart
 
 ## Ansible Control Node
 
--
+- Update OS.
 
 ```sudo apt update```
 ```sudo apt upgrade```
 
 enter yes
 
-- 
+- Install Ansible.
+
 ```sudo apt install ansible```
 
 enter yes
+
+- Install Git.
+
+```sudo apt install git```
+
+enter yes
+
+- Create Git user.
+
+```ssh-keygen -t ed25519 -C ansible-control-node```
+
+enter 3 times
+
+Open ~/.ssh/ed25519.pub and copy the public key to the clipboard.
+Add this key to GitHub.
+
+- Clone Ansible bootstrap repository.
+_Note: This step may be deleted once Ansible pull comes into play_
+
+```git clone git@github.com:shekar-balgobin/Ansible-Bootstrap.git```
+
