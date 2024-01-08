@@ -16,7 +16,7 @@ flowchart
     subgraph MN1[Managed Node 1]
     end
 
-    subgraph MNN[Managed Node N]
+    subgraph MNN[Managed Node n]
     end
 
     ACN-->MN0
