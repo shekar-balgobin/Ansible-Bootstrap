@@ -1,6 +1,13 @@
 ---
 
-- hosts: all
+- hosts: ansible_control_node
   become: true
+  tasks:
+
   vars:
-    user_ansible: ansible
+    path: ansible_user
+
+  - name: Create Ansible user
+    user:
+      name: ansible-user
+      groups: root

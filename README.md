@@ -8,6 +8,8 @@ flowchart
     end
 
     subgraph ACN[Ansible Control Node]
+        A[Ansible]
+        G[Git]
     end
 
     subgraph MN0[Managed Node 0]
@@ -27,24 +29,27 @@ flowchart
 
 ## Ansible Control Node
 
-- Update OS.
+- Establish a secure connection with ```ssh user@hostname```, ```yes``` to continue connecting, followed by the password.
 
-```sudo apt update```
-```sudo apt upgrade```
+- Update the package index with ```sudo apt update```.
 
-enter yes
+- Install the packages with ```sudo apt upgrade```, followed by ```Y``` to continue.
 
-- Install Ansible.
+### Ansible
 
-```sudo apt install ansible```
+- Install Ansible with ```sudo apt install ansible```, followed by ```Y``` to continue.
 
-enter yes
+#### SSH Key for Ansible User
 
-- Install Git.
+- Generate the SSH key for the Ansible user with ```ssh-keygen -t ed25519 -C ansible-user```
 
-```sudo apt install git```
+### Git
 
-enter yes
+- Install Git with ```sudo apt install git```, followed by ```Y``` to continue.
+
+
+
+---
 
 - Create Git user.
 
