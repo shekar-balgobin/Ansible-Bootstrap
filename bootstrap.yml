@@ -4,10 +4,7 @@
   become: true
   tasks:
 
-  vars:
-    path: ansible_user
-
-  - name: Create Ansible user
-    user:
-      name: ansible-user
-      groups: root
+  - name: Install updates
+    apt:
+      upgrade: dist
+      update_cache: yes
